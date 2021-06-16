@@ -1,0 +1,126 @@
+*{
+  padding: 0;
+  margin: 0;
+  --light_black: rgb(46,50,65);
+  --blue: rgb(57,195,191);
+  --dark_black: rgb(25,29,40);
+  --white: rgb(255, 255, 255);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  --grey: rgb(128,130,136);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--dark_black);
+  color: var(--white);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 5% 0 5%;
+}
+
+.logo {
+  height: 10%;
+  width: 15%;
+}
+
+.convert-curr-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.convert-curr-btn > select {
+  background-color: var(--light_black);
+  margin: 7%;
+  padding: 7%;
+  color: var(--white);
+  border-radius: 10px;
+  font-weight: 900;
+  border: 0;
+  
+}
+
+.nav-btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.nav-btn > div {
+  padding: 5px;
+  margin: 5px;
+}
+
+.connect-telegram-btn {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+  font-size: 15px;
+  background-color: var(--blue);
+  border-radius: 5px;
+}
+
+.connect-telegram-btn > span {
+  margin-left: 10px;
+}
+
+.notification-badge {
+  border: 3px solid var(--blue);
+  padding: 5%;
+  border-radius: 100%;
+  color: var(--blue)
+}
+
+main {
+  margin: 2% 5% 2% 5%;
+
+}
+
+table {
+  border-collapse: separate;
+  display: table;
+  max-width: 100%;
+  color: var(--grey);
+  overflow-x: auto;
+  position: relative;
+  width: 100%;
+  border-spacing: 0 20px;
+}
+
+table td,
+table th {
+  display: table-cell;
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+  text-align: center;
+}
+
+table td {
+  color: var(--white);
+}
+
+tr {
+  border-radius: 50px;
+}
+
+tbody > tr {
+  background-color: var(--light_black);
+}
+
+table th {
+  vertical-align: middle;
+}
+
+.item-cell {
+  padding: 2px 12px;
+}
+

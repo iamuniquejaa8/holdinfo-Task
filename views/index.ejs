@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HoldInfo</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/themebtn.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header>
+      <img src='https://i.ibb.co/zP8V1Mz/logo.jpg' class="logo">
+      <div class="convert-curr-btn">
+        <select name="from-currencies">
+          <option value="INR">INR</option>
+        </select>
+
+        <select name="to-currencies">
+          <option value="BTC">BTC</option>
+        </select>
+      </div>
+      <div class="nav-btn">
+        <div class="notification-badge">58</div>
+        <div class="connect-telegram-btn"><i class="fa fa-telegram"></i><span>Connect Telegram</span></div>
+        <div>
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th>Last</th>
+              <th>Buy / Sell Price</th>
+              <th>Volume</th>
+              <th>Base_Unit</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <% for(var i=0; i < data.length; i++) { %>
+              <tr>
+                <td><%= i + 1 %></td>
+                <td><%= data[i].name %>
+                <td>&#8377; <%= (Number(data[i].last)).toLocaleString() %></td>
+                <td>&#8377; <%= (Number(data[i].buy)).toLocaleString() %> / <%=(Number(data[i].sell)).toLocaleString() %> </td>
+                <td><%= data[i].volume %>
+                <td><%= data[i].base_unit %>
+              </tr>
+           <% } %>
+
+          </tbody>
+        </table>
+    </main>
+  </body>
+</html>
